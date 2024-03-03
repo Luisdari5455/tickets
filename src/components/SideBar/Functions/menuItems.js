@@ -15,28 +15,34 @@ const menuItems = [
     icon: GroupIcon,
     path: '/roles',
   },
-  {
-    text: 'Crear Ticket',
-    icon: AddBoxIcon,
-    // path: '/crear-ticket',
-    subItems: [
-      {
-        text: 'Sub-opción 1',
-        path: '/crear-ticket/sub-opcion-1',
-        icon: AddBoxIcon,
-      },
-      // Más subopciones aquí si es necesario
-    ],
-  },
+  // {
+  //   text: 'Crear Ticket',
+  //   icon: AddBoxIcon,
+  //   path: '/tickets',
+  //   // path: '/crear-ticket',
+  //   // subItems: [
+  //   //   {
+  //   //     text: 'Sub-opción 1',
+  //   //     path: '/crear-ticket/sub-opcion-1',
+  //   //     icon: AddBoxIcon,
+  //   //   },
+  //   //   // Más subopciones aquí si es necesario
+  //   // ],
+  // },
   {
     text: 'Administración de Tickets',
     icon: AssignmentIcon,
     // path: '/admin-tickets',
     subItems: [
       {
-        text: 'Sub-opción A',
-        // path: '/admin-tickets/sub-opcion-a',
+        text: 'Crear Ticket',
         icon: AddBoxIcon,
+        path: '/tickets',
+      },
+      {
+        text: 'Administrar Tickets',
+        icon: AddBoxIcon,
+        path: '/tickets',
       },
       // Más subopciones aquí si es necesario
     ],

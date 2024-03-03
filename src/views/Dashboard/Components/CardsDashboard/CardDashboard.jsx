@@ -30,22 +30,21 @@ const cardData = [
 
 const DashboardCards = () => {
   return (
-    < >
-     
-        {cardData.map((card, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Card className={`dashboardCard ${card.colorClass}`}>
-              <CardContent className="dashboardCardContent">
-                <card.Icon className="dashboardIcon" />
-                <Typography variant="h5">{card.title}</Typography>
-                <Typography variant="h6">{card.value}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      
+    
+     <Grid container spacing={2}> {/* Utiliza un margen horizontal de 2 entre las tarjetas */}
+      {cardData.map((card, index) => (
+        <Grid item xs={12} sm={6} md={4} key={index}> {/* Define el tamaño de las columnas para diferentes tamaños de pantalla */}
+          <Card className={`dashboardCard ${card.colorClass}`}>
+            <CardContent className="dashboardCardContent">
+              <card.Icon className="dashboardIcon" />
+              <Typography variant="h5">{card.title}</Typography>
+              <Typography variant="h6">{card.value}</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
   
-    </>
   );
 };
 

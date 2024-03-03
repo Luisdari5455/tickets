@@ -32,30 +32,10 @@ const Dashboard = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', backgroundColor:'  #F3F3F3' }}>
       <CssBaseline />
-      <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1, marginLeft: { md: `${drawerWidth}px` }, width: { md: `calc(100% - ${drawerWidth}px)` } }}>
-        <Toolbar>
-          {isMobile && (
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-          <Typography variant="h6" noWrap>
-            Dashboard
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-      >
+     
+     
 
         <Drawer
           variant="permanent"
@@ -81,13 +61,15 @@ const Dashboard = () => {
           <SideBar        open={mobileOpen}
           toggleDrawer={handleDrawerToggle} />
         </Drawer>
-      </Box>
+   
       <Box
         component="main"
         sx={{
           flexGrow: 1,
           p: 3,
           width: { md: `calc(100% - ${drawerWidth}px)` },
+          marginLeft: { md: `${drawerWidth}px` }, // Ajusta el margen izquierdo para que el contenido esté al lado del Sidebar
+          marginTop: `64px`, // Ajusta el margen superior para que el contenido esté debajo del AppBar
         }}
       >
         <Toolbar />
